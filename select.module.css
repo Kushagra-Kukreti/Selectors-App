@@ -1,0 +1,134 @@
+
+
+.bigContainer{
+  top: 28%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  background-color: rgb(180, 180, 180);
+  padding: 3em;
+  border-radius: 2em;
+  height: 80%;
+  min-width: 20%;
+  margin: 0%;
+  border :0.2em solid white;
+}
+
+
+.container {
+  position:relative;
+  width: 20em;
+  min-height: 1.5em;
+  border: .2em solid #000000;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: .5em;
+  border-radius: 1.7em;
+  background-color: rgb(76, 94, 117);
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+
+.container:focus {
+  border-color: hsl(200, 100%, 50%);
+}
+
+.value {
+  flex-grow: 1;
+  display: flex;
+  gap: .5em;
+  flex-wrap: wrap;
+}
+
+.clear-btn {
+  background: none;
+  color: #000000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.25em;
+}
+
+.clear-btn:focus,
+.clear-btn:hover {
+  color: #ffffff;
+}
+
+.divider {
+  background-color:#000000;
+  align-self: stretch;
+  width: .05em;
+}
+
+
+.caret {
+  translate: 0 25%;
+  border: .25em solid transparent;
+  border-top-color: #000000;
+}
+
+.options {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  max-height: 15em;
+  overflow-y: auto;
+  border: .05em solid #777;
+  border-radius: .25em;
+  width: 100%;
+  left: 0;
+  top: calc(100% + .25em);
+  background-color: rgb(0, 0, 0);
+  z-index: 100;
+}
+
+.options.show {
+  display: block;
+}
+
+.option {
+  padding: .25em .5em;
+  cursor: pointer;
+}
+
+.option.selected {
+  background-color: hsl(200, 100%, 70%);
+}
+
+.option.highlighted {
+  background-color: hsl(200, 100%, 50%);
+  color: white
+}
+
+.option-badge {
+  display: flex;
+  align-items: center;
+  border: .13em solid #050505;
+  border-radius: 1em;
+  padding: .15em .5em;
+  gap: .25em;
+  cursor: pointer;
+  background:hsl(199, 91%, 56%);;
+  outline: none;
+}
+
+.option-badge:hover,
+.option-badge:focus {
+  background-color: hsl(231, 76%, 52%);
+  border-color: hsl(0, 0%, 0%);
+}
+
+.option-badge:hover > .remove-btn,
+.option-badge:focus > .remove-btn{
+  color: hsl(0, 0%, 0%);
+}
+
+.option-badge > .remove-btn {
+  font-size: 1.25em;
+  color: #000000;
+}
